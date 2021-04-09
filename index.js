@@ -9,7 +9,7 @@ client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
 
 ["command", "events"].forEach(handler => {
-    require(`./handlers/${handler}`)(client);
+    require(`./handler/${handler}`)(client);
 });
 
 
