@@ -11,9 +11,21 @@ const loadData = async () => {
 }
 loadData()
 
-module.exports = {
-  requiredPermissions: ['ADMINISTRATOR'],
-  callback: async (message) => {
+
+
+    name: "setwelcome",
+
+    description: "Command Description",
+
+    category: "test",
+
+    botPermission: [],
+
+    authorPermission: [],
+
+    ownerOnly: true,
+
+    run: async (client, message, args) => {
     const { guild, channel } = message
 
     await welcomeSchema.findOneAndUpdate(
